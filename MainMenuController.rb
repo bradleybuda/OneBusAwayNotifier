@@ -6,7 +6,7 @@ class MainMenuController < NSWindowController
 
 	def awakeFromNib
 		Growl::Notifier.sharedInstance.register('GrowlSample', [GROWL_HELLO])
-		growl GROWL_HELLO, 'OneBusAway Notifier', 'Ready to Serve', :icon => NSImage.imageNamed('onebusaway_icon')
+		growl GROWL_HELLO, 'OneBusAway Notifier', 'Checking for Buses...', :icon => NSImage.imageNamed('onebusaway_large')
 			
 		bar = NSStatusBar.systemStatusBar
 		@item = bar.statusItemWithLength(NSSquareStatusItemLength)
